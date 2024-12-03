@@ -1,14 +1,14 @@
-/* eslint-disable react/prop-types */
-import Part from './Part';
-import Total from './Total'
-
+import Part1 from "./Part1"
+import Part2 from "./Part2"
+import Part3 from "./Part3"
 
 // eslint-disable-next-line react/prop-types
 export default function Content({parts}){
     return(
         <div>
-        {parts.map(part => (<Part key={part.id} name={part.name} exercises={part.exercises} />))}
-        <Total parts={parts}/>
-      </div>
+          <Part1 part1={parts[0].name} exercises1={parts[0].exercises}/>
+          <Part2 part2={parts[1].name} exercises2={parts[1].exercises}/>
+          <Part3 part3={parts[2].name} exercises3={parts[2].exercises}/>
+        </div>
     )
 }
